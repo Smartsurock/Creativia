@@ -412,7 +412,7 @@ $('body').on('click', '.tab-navitem', function (event) {
 
 <div class="menu__search search">
 <div class="search__line">
-	<a href="#" class="search__btn"><img src="img/icons/search.png" alt="alt" /></a>
+	<a href="#" class="search__btn"><i class="fa fa-search" aria-hidden="true"></i></a>
 	<input class="search__text" autocomplete="off" data-value="Find a recipe" type="text">
 </div>
 </div>
@@ -4156,6 +4156,56 @@ $(document).ready(function () {
 		responsive: [
 			{
 				breakpoint: 450,
+				settings: {
+					dots: true,
+					arrows: false
+				}
+			}
+		]
+	});
+});
+
+$(document).ready(function () {
+	$(".slider-2").slick({
+		arrows: false,
+		dots: true,
+		adaptiveHeight: true,
+		slidesToShow: 1,
+		autoplay: true,
+		autoplaySpeed: 3000,
+		speed: 1500,
+		waitForAnimate: true,
+		infinite: true,
+		// centerMode: true,
+		responsive: [
+			{
+				breakpoint: 450,
+				settings: {
+					dots: true,
+					arrows: false
+				}
+			}
+		]
+	});
+});
+
+$(document).ready(function () {
+	$(".slider-3").slick({
+		arrows: true,
+		dots: false,
+		adaptiveHeight: false,
+		slidesToShow: 2,
+		autoplay: false,
+		autoplaySpeed: 3000,
+		speed: 1000,
+		waitForAnimate: false,
+		infinite: false,
+		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>',
+		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>',
+		vertical: true,
+		responsive: [
+			{
+				breakpoint: 150,
 				settings: {
 					dots: true,
 					arrows: false
